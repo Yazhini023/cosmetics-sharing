@@ -3,7 +3,7 @@
     width: 1428px;
     top: 0;
     height: 90px;
-    background-color: lightgreen;
+    background-color: rgb(244, 142, 169);
     display: flex;
     justify-content: space-around; /* Distribute items left and right */
     align-items: center;

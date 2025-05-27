@@ -3,7 +3,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('https://i.pinimg.com/736x/10/17/9b/10179bf9ab9ca59d28b8e4c818b6b5ff.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 .signup-form{
     width: 50vh;
     display: flex;
@@ -31,5 +35,5 @@ input[type="password"]{
     cursor: pointer;
 }
 .signup-form button:hover {
-    background-color:#4CAF50;
+    background-color:#d63384;
 }

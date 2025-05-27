@@ -5,7 +5,7 @@
 
 /* Hero Section */
 .hero-section {
-  background-image: url('/hero-cosmetics.jpg');
+  background-image: url('https://i.pinimg.com/736x/fc/45/3e/fc453e2020416cee8cbf22b8d1087e98.jpg');
   background-size: cover;
   background-position: center;
   height: 80vh;
@@ -15,7 +15,7 @@
 }
 
 .hero-content {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url('https://i.pinimg.com/736x/e7/47/8b/e7478b2b186ad96baeedc1d97dc24ed2.jpg');
   padding: 40px;
   border-radius: 20px;
   text-align: center;
@@ -33,7 +33,7 @@
 }
 
 .btn-primary {
-  background-color: #e91e63;
+  background-color: #0b87f3;
   color: white;
   padding: 12px 28px;
   border: none;
@@ -43,13 +43,13 @@
 }
 
 .btn-primary:hover {
-  background-color: #c2185b;
+  background-color: #2c882f;
 }
 
 /* Features Section */
 .features-section {
   padding: 60px 20px;
-  background-color: #ffe4ec;
+  background-color: #fff0f5;
   text-align: center;
 }
 
@@ -91,8 +91,8 @@
 
 /* CTA Section */
 .cta-section {
-  background-color: #e91e63;
-  color: white;
+  background-color: #fff0f5;
+  color: #c2185b;
   text-align: center;
   padding: 50px 20px;
 }
@@ -104,7 +104,7 @@
 
 .btn-light {
   background-color: white;
-  color: #e91e63;
+  color: #020202;
   padding: 12px 28px;
   border: none;
   border-radius: 10px;
@@ -114,4 +114,45 @@
 
 .btn-light:hover {
   color: #c2185b;
+}
+
+/* Slow fade for the whole home page */
+.home-page {
+  animation: fadeInHome 2.5s ease-in-out;
+}
+
+@keyframes fadeInHome {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Animate each section */
+.hero-section,
+.features-section,
+.cta-section {
+  opacity: 0;
+  animation: slideUpSlow 2.5s ease-in-out forwards;
+}
+
+.hero-section {
+  animation-delay: 0.3s;
+}
+.features-section {
+  animation-delay: 0.8s;
+}
+.cta-section {
+  animation-delay: 1.3s;
+}
+
+@keyframes slideUpSlow {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
