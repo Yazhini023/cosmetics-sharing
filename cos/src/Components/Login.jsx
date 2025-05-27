@@ -36,7 +36,7 @@ const Login = () => {
         />
         
         <label htmlFor='pass'>Password: </label>
-        <input type='text'
+        <input type='password'
         value={password1}
         onChange={(e) => setPassword1(e.target.value)}
         />
