@@ -9,10 +9,11 @@ const Navbar = () => {
             <img src={logo} />
         </div>
       <ul className='nav-link'>
-        <Link to='/'>SignUp</Link>
-        <Link to='/login'>Login</Link>
-        <Link to='/home'>Home</Link>
-        <Link to='/about'> About </Link>
+        <li><Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}>SignUp</Link></li>
+        <li><Link to='/login' style={{ textDecoration: 'none', color: 'inherit' }}>Login</Link></li>
+        <li><Link to='/home' style={{ textDecoration: 'none', color: 'inherit' }}>Home</Link></li>
+        <li><Link to='/about' style={{ textDecoration: 'none', color: 'inherit' }}>About</Link></li>
+        <li><Link to='/products' style={{ textDecoration: 'none', color: 'inherit' }}>Products</Link></li>
       </ul>
     </div>
   )

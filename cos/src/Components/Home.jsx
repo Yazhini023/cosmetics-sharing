@@ -17,7 +17,7 @@ function Home() {
         transition={{ delay: 0.3, duration: 2 }}
       >
         <div className="hero-content">
-          <h1>Welcome to Organic Beauty</h1>
+          <h1>Welcome to Glam House</h1>
           <p>A place to share and discover your favorite beauty products with the world.</p>
           <button className="btn-primary">Join Now</button>
         </div>
@@ -29,7 +29,7 @@ function Home() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1, duration: 2 }}
       >
-        <h2>Why Organic Beauty?</h2>
+        <h2>Why Glam House?</h2>
         <p className="features-intro">Connect with the beauty community and elevate your skincare and makeup game.</p>
         <div className="features-grid">
           <div className="feature-card">

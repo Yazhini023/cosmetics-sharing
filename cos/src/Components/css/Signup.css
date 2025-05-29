@@ -1,39 +1,80 @@
-.signup-container{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('https://i.pinimg.com/736x/10/17/9b/10179bf9ab9ca59d28b8e4c818b6b5ff.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+.signup-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://i.pinimg.com/736x/10/17/9b/10179bf9ab9ca59d28b8e4c818b6b5ff.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: fadeIn 1s ease-in;
 }
 
-.signup-form{
-    width: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid black;
-    padding: 50px;
-    gap: 10px;
+/* Form Animation */
+.signup-form {
+  width: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 30px;
+  padding: 50px;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideFade 0.6s ease-out forwards;
 }
+
+/* Input Styling */
 input[type="text"],
-input[type="password"]{
-    width: 95%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+input[type="password"] {
+  width: 95%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
-.signup-form button{
-    width: 100%;
-    padding: 10px;
-    background-color: #1AA7EC;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #1aa7ec;
+  box-shadow: 0 0 8px rgba(26, 167, 236, 0.3);
 }
+
+/* Button Styling */
+.signup-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1aa7ec;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
 .signup-form button:hover {
-    background-color:#d63384;
+  background-color: #d63384;
+  transform: scale(1.03);
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Keyframes */
+@keyframes slideFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
