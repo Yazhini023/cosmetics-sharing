@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import "./css/Home.css";
 
 function Home() {
+  const navigate = useNavigate();
   return (
     <motion.div
       className="home-page"
@@ -19,7 +21,6 @@ function Home() {
         <div className="hero-content">
           <h1>Welcome to Glam House</h1>
           <p>A place to share and discover your favorite beauty products with the world.</p>
-          <button className="btn-primary">Join Now</button>
         </div>
       </motion.section>
 
@@ -33,7 +34,7 @@ function Home() {
         <p className="features-intro">Connect with the beauty community and elevate your skincare and makeup game.</p>
         <div className="features-grid">
           <div className="feature-card">
-            <img src="/icons/share.png" alt="Share" className="feature-icon" />
+            <img src="https://static.vecteezy.com/system/resources/previews/014/455/886/non_2x/share-icon-on-transparent-background-free-png.png" alt="Share" className="feature-icon" />
             <h3>Share Your Favorites</h3>
             <p>Post your favorite cosmetics with photos and tips.</p>
           </div>
@@ -58,7 +59,9 @@ function Home() {
       >
         <h2>Ready to Share Your Style?</h2>
         <p>Join GlamShare today and connect with beauty lovers everywhere.</p>
-        <button className="btn-light">Get Started</button>
+        <button className="btn-light"
+        onClick={() => navigate("/products")}>
+        Get Started</button>
       </motion.section>
     </motion.div>
   );

@@ -32,19 +32,6 @@
   margin-bottom: 30px;
 }
 
-.btn-primary {
-  background-color: #0b87f3;
-  color: white;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background-color: #2c882f;
-}
 
 /* Features Section */
 .features-section {
