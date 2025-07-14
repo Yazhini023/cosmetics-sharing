@@ -9,23 +9,26 @@ import Products from './Components/Products';
 import ProductsDetail from './Components/ProductsDetails';
 import Cart from './Components/Cart';
 import { CartProvider } from './CartContext';
+import { AuthProvider } from './AuthContext';
 
 const App = () => {
   return (
-    <CartProvider>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Signup />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/products' element={<Products />} />
-          <Route path='/product/:id' element={<ProductsDetail />} />
-          <Route path='/cart' element={<Cart />} />
-        </Routes>
-      </Router>
-    </CartProvider>
+    <AuthProvider>
+      <CartProvider>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Signup />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/products' element={<Products />} />
+            <Route path='/product/:id' element={<ProductsDetail />} />
+            <Route path='/cart' element={<Cart />} />
+          </Routes>
+        </Router>
+      </CartProvider>
+    </AuthProvider>
   );
 };
 
