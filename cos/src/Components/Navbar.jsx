@@ -14,6 +14,7 @@ const Navbar = () => {
         <li><Link to='/home' style={{ textDecoration: 'none', color: 'inherit' }}>Home</Link></li>
         <li><Link to='/about' style={{ textDecoration: 'none', color: 'inherit' }}>About</Link></li>
         <li><Link to='/products' style={{ textDecoration: 'none', color: 'inherit' }}>Products</Link></li>
+        <li><Link to='/cart' style={{ textDecoration: 'none', color: 'inherit' }}>🛒 Cart</Link></li>
       </ul>
     </div>
   )

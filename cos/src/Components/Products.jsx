@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   WhatsappShareButton,
   FacebookShareButton,
-  TwitterShareButton,
   WhatsappIcon,
   FacebookIcon,
-  TwitterIcon
 } from "react-share";
 import "./css/Products.css";
 
@@ -32,48 +30,67 @@ const sampleProducts = [
 ];
 
 const Products = () => {
+  const [search, setSearch] = useState("");
+
+  const filteredProducts = sampleProducts.filter((product) =>
+    product.name.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
-    <div className="product-list">
-      {sampleProducts.map((product) => {
-        const shareUrl = `https://yourwebsite.com/product/${product.id}`;
-        const shareText = `Check out this awesome product: ${product.name}`;
-        return (
-          <div className="product-card" key={product.id}>
-            <img src={product.image} alt={product.name} />
-            <h3>{product.name}</h3>
-            <p>{product.description}</p>
+    <div className="product-wrapper">
+      {/* ✅ Search Box */}
+      <div className="search-box">
+        <input
+          type="text"
+          placeholder="Search products..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </div>
 
-            <div className="share-buttons">
-              <WhatsappShareButton url={shareUrl} title={shareText}>
-                <WhatsappIcon size={32} round />
-              </WhatsappShareButton>
-              <FacebookShareButton url={shareUrl} quote={shareText}>
-                <FacebookIcon size={32} round />
-              </FacebookShareButton>
-              <TwitterShareButton url={shareUrl} title={shareText}>
-                <TwitterIcon size={32} round />
-              </TwitterShareButton>
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Share on Instagram"
-              >
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
-                  alt="Instagram"
-                  className="icon"
-                  width="32"
-                />
-              </a>
-            </div>
+      <div className="product-list">
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => {
+            const shareUrl = `https://yourwebsite.com/product/${product.id}`;
+            const shareText = `Check out this awesome product: ${product.name}`;
+            return (
+              <div className="product-card" key={product.id}>
+                <img src={product.image} alt={product.name} />
+                <h3>{product.name}</h3>
+                <p>{product.description}</p>
 
-            <Link to={`/product/${product.id}`} className="view-details-btn">
-              View Details
-            </Link>
-          </div>
-        );
-      })}
+                <div className="share-buttons">
+                  <WhatsappShareButton url={shareUrl} title={shareText}>
+                    <WhatsappIcon size={32} round />
+                  </WhatsappShareButton>
+                  <FacebookShareButton url={shareUrl} quote={shareText}>
+                    <FacebookIcon size={32} round />
+                  </FacebookShareButton>
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Share on Instagram"
+                  >
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
+                      alt="Instagram"
+                      className="icon"
+                      width="32"
+                    />
+                  </a>
+                </div>
+
+                <Link to={`/product/${product.id}`} className="view-details-btn">
+                  View Details
+                </Link>
+              </div>
+            );
+          })
+        ) : (
+          <p style={{ textAlign: "center", width: "100%" }}>No products found.</p>
+        )}
+      </div>
     </div>
   );
 };
