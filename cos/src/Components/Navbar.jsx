@@ -7,14 +7,13 @@ import { AuthContext } from '../AuthContext';
 const Navbar = () => {
   const { isLoggedIn, logout } = useContext(AuthContext);
   const navigate = useNavigate();
-  const location = useLocation(); // ✅ Get current path
+  const location = useLocation();
 
   const handleLogout = () => {
     logout();
     navigate('/login');
   };
 
-  // ✅ Hide Cart on Login and Signup pages
   const hideCart = location.pathname === '/' || location.pathname === '/login';
 
   return (

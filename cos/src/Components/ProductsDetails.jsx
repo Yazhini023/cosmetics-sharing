@@ -6,20 +6,27 @@ const productData = {
   1: {
     name: "Rose Water Toner",
     image: "https://i.pinimg.com/736x/38/17/c3/3817c37dbb8f09c0e0630b9841a297a1.jpg",
-    description: "Detailed info about the rose water toner...",
     price: 200,
   },
   2: {
     name: "Matte Lipstick",
     image: "https://i.pinimg.com/736x/7d/06/9f/7d069fd1801bec30b26e1ca627035481.jpg",
-    description: "Detailed info about the matte lipstick...",
     price: 350,
   },
   3: {
     name: "Organic Moisturizer",
     image: "https://i.pinimg.com/736x/f5/fd/e0/f5fde0b1a169f058a1e3f086b469eb36.jpg",
-    description: "Detailed info about the moisturizer...",
     price: 300,
+  },
+  4: {
+    name: "Eyeliner",
+    image: "https://www.lakmeindia.com/cdn/shop/files/24894_S3-8901030979552_1000x.jpg?v=1709807082",
+    price: 150,
+  },
+   5: {
+    name: "Face Mask",
+    image: "https://image.made-in-china.com/202f0j00NCmhOBLkPcbV/Belleza-Korea-Skin-Care-Facial-Mask-Fruit-Beauty-Face-Mask-Mascarillasl-Facial-Carrot-Kiwi-Whitening-Face-Sheet-Mask.webp",
+    price: 199,
   }
 };
 

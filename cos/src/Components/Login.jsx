@@ -2,13 +2,13 @@ import React, { useState, useContext } from 'react';
 import './css/Login.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../AuthContext'; // 👈 Import the context
+import { AuthContext } from '../AuthContext';
 
 const Login = () => {
   const [email1, setEmail1] = useState('');
   const [password1, setPassword1] = useState('');
   const navigate = useNavigate();
-  const { login } = useContext(AuthContext); // 👈 Get login method
+  const { login } = useContext(AuthContext);
 
   function handlePost1() {
     axios.post("http://localhost:5000/cosmetics/login", { email1, password1 })
@@ -16,7 +16,7 @@ const Login = () => {
         alert("Logined !!");
         setEmail1('');
         setPassword1('');
-        login(); // 👈 Set isLoggedIn = true
+        login();
         navigate('/home');
       })
       .catch((err) => {

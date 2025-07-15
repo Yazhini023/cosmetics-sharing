@@ -1,4 +1,3 @@
-// src/Components/Cart.jsx
 import React, { useContext } from "react";
 import { CartContext } from "../CartContext";
 
