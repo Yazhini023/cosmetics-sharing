@@ -39,12 +39,12 @@ function Home() {
             <p>Post your favorite cosmetics with photos and tips.</p>
           </div>
           <div className="feature-card">
-            <img src="/icons/discover.png" alt="Discover" className="feature-icon" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSQv3-UE30ahGuM6sR6CPdedUmLtJGt5n4GA&s" alt="Discover" className="feature-icon" />
             <h3>Discover New Products</h3>
             <p>Explore trending beauty products from the community.</p>
           </div>
           <div className="feature-card">
-            <img src="/icons/review.png" alt="Review" className="feature-icon" />
+            <img src="https://png.pngtree.com/png-vector/20220530/ourmid/pngtree-3d-rating-stars-icon-for-review-product-png-image_4761748.png" alt="Review" className="feature-icon" />
             <h3>Rate & Review</h3>
             <p>Leave honest reviews to help others choose wisely.</p>
           </div>

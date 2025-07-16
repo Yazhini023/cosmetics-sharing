@@ -27,7 +27,8 @@
 
 /* Input Styling */
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+select,option {
   width: 95%;
   padding: 10px;
   margin: 10px 0;

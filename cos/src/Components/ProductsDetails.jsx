@@ -62,7 +62,7 @@ const ProductDetail = () => {
       <div style={{ marginTop: "30px" }}>
         <button
           onClick={() => addToCart(product)}
-          style={btnStyle}
+          style={btnStyle} 
         >
           Add to Cart
         </button>
