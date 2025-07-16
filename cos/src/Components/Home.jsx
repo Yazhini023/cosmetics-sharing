@@ -20,7 +20,7 @@ function Home() {
       >
         <div className="hero-content">
           <h1>Welcome to Glam House</h1>
-          <p>A place to share and discover your favorite beauty products with the world.</p>
+          <p>A place to wounder and discover your favorite beauty products to buy it.</p>
         </div>
       </motion.section>
 
@@ -57,8 +57,7 @@ function Home() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1.5, duration: 2 }}
       >
-        <h2>Ready to Share Your Style?</h2>
-        <p>Join GlamShare today and connect with beauty lovers everywhere.</p>
+        <h2>Let's Get Started!!</h2>
         <button className="btn-light"
         onClick={() => navigate("/products")}>
         Get Started</button>
